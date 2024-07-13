@@ -16,14 +16,14 @@ def send_email_task(email):
         # email parameters
         msg = MIMEText(f" Testing my Messaging System. \n Have a great day!")
         msg['Subject'] = 'Hi there'
-        msg['From'] = 'afolabi@hadiamedia.com'  # Update with your email
+        msg['From'] = 'xxxxxx@exam.com'  # Update with your email
         msg['To'] = email
 
         # SMTP server configuration
-        smtp_server = 'mail.hadiamedia.com'
+        smtp_server = 'xxxxxx@exam.com'
         smtp_port = 587
-        smtp_user = 'afolabi@hadiamedia.com'  # Update with your email
-        smtp_password = '156864044Afo'  # Update with your app-specific password
+        smtp_user = 'xxxxxx@exam.comm'  # Update with your email
+        smtp_password = 'xxxxxx'  # Update with your app-specific password
 
         # Sending the email
         with smtplib.SMTP(smtp_server, smtp_port) as server:

@@ -5,10 +5,11 @@ on:
       - main
 jobs:
 
-  build:
+  buid:
     name: testing
     runs-on: ubuntu-latest 
     steps:
+      - name: checkout repo
         uses: actions/checkout@v4  
       - name: copy file via ssh key
         uses: appleboy/scp-action@v0.1.7

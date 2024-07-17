@@ -1,0 +1,21 @@
+name: test-yes
+on:
+  push:
+    branches:
+      - main
+jobs:
+  ssh-test:
+    runs-on: ubuntu-latest 
+    steps:
+        uses: actions/checkout@v4  
+      - name: copy file via ssh key
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
+          source: "rabinstaller.sh"
+          target: text
+      - name: run the script
+        run: ./rabinstaller.sh

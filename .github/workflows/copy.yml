@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  ssh-test:
+  ssh:
     name: testing
     runs-on: ubuntu-latest 
     steps:
